@@ -4,9 +4,19 @@ OpenCV + MediaPipe pipeline for **real-time hand landmark extraction** from webc
 
 ## Status
 
-Scaffold — collect samples, train (`scripts/train.py` once added), export a demo GIF. Resume CV project listed on my dossier.
+**Early scaffold — no implementation code yet.** This repo documents intent and setup steps. Code lands in a future push.
 
-## Quick start (landmarks only)
+Planned layout:
+
+```
+sign-language-cv/
+├── scripts/capture.py      webcam frame + landmark export
+├── scripts/train.py        sklearn classifier on saved landmarks
+├── data/                   user-collected labelled clips (gitignored)
+└── demo/                   inference + optional GIF export
+```
+
+## Quick start (verify deps)
 
 ```bash
 python -m venv .venv
@@ -16,6 +26,10 @@ python -c "import mediapipe as mp; print('ok')"
 ```
 
 Roadmap: fingerspelling A–Z first, then word-level gestures.
+
+## Related work
+
+Archived gesture demos: [cv2-volume-control](https://github.com/Siddarthb07/cv2-volume-control) (system volume via hand gestures).
 
 ## License
 
